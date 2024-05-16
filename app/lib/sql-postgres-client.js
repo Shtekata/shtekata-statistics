@@ -1,13 +1,8 @@
-import { Pool, QueryResultRow } from 'pg'
+const { Pool } = require('pg')
 
 const pool = new Pool({ connectionString: process.env.POSTGRES_URL })
 
-type Primitive = string | number | boolean | undefined | null
-
-function sqlTemplate(
-  strings: TemplateStringsArray,
-  ...values: Primitive[]
-): [string, Primitive[]] {
+function sqlTemplate(strings, ...values) {
   if (!isTemplateStringsArray(strings) || !Array.isArray(values)) {
     throw new Error(
       'It looks like you tried to call `sql` as a function. Make sure to use it as a tagged template.\n' +
@@ -24,19 +19,16 @@ function sqlTemplate(
   return [result, values]
 }
 
-function isTemplateStringsArray(
-  strings: unknown
-): strings is TemplateStringsArray {
+function isTemplateStringsArray(strings) {
   return (
     Array.isArray(strings) && 'raw' in strings && Array.isArray(strings.raw)
   )
 }
 
-export async function sql<O extends QueryResultRow>(
-  strings: TemplateStringsArray,
-  ...values: Primitive[]
-) {
+const sql = async function sql(strings, ...values) {
   const [query, params] = sqlTemplate(strings, ...values)
 
-  return pool.query<O>(query, params)
+  return pool.query(query, params)
 }
+
+module.exports = { sql }
