@@ -1,4 +1,7 @@
 // This file contains placeholder data that you'll be replacing with real data in the Data Fetching chapter:
+
+const { number } = require('zod')
+
 // https://nextjs.org/learn/dashboard-app/fetching-data
 const users = [
   {
@@ -172,18 +175,18 @@ const invoices = [
 ]
 
 const revenue = [
-  { month: 'Jan', revenue: 2000 },
-  { month: 'Feb', revenue: 1800 },
-  { month: 'Mar', revenue: 2200 },
-  { month: 'Apr', revenue: 2500 },
-  { month: 'May', revenue: 2300 },
-  { month: 'Jun', revenue: 3200 },
-  { month: 'Jul', revenue: 3500 },
-  { month: 'Aug', revenue: 3700 },
-  { month: 'Sep', revenue: 2500 },
-  { month: 'Oct', revenue: 2800 },
-  { month: 'Nov', revenue: 3000 },
-  { month: 'Dec', revenue: 4800 }
+  { month: 'Jan', revenue: 2000, number: 1 },
+  { month: 'Feb', revenue: 1800, number: 2 },
+  { month: 'Mar', revenue: 2200, number: 3 },
+  { month: 'Apr', revenue: 2500, number: 4 },
+  { month: 'May', revenue: 2300, number: 5 },
+  { month: 'Jun', revenue: 3200, number: 6 },
+  { month: 'Jul', revenue: 3500, number: 7 },
+  { month: 'Aug', revenue: 3700, number: 8 },
+  { month: 'Sep', revenue: 2500, number: 9 },
+  { month: 'Oct', revenue: 2800, number: 10 },
+  { month: 'Nov', revenue: 3000, number: 11 },
+  { month: 'Dec', revenue: 4800, number: 12 }
 ]
 
 module.exports = {
