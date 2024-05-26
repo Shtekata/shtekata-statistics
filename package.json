@@ -23,6 +23,7 @@
     "react-dom": "19.0.0-beta-04b058868c-20240508",
     "sharp": "^0.33.3",
     "tailwindcss": "^3.3.3",
+    "tailwindcss-signals": "^0.0.25",
     "typescript": "^5.2.2",
     "use-debounce": "^10.0.0",
     "zod": "^3.22.2"
