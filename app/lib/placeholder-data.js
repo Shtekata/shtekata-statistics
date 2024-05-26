@@ -86,91 +86,106 @@ const invoices = [
     customer_id: customers[0].id,
     amount: 15795,
     status: 'pending',
-    date: '2022-12-06'
+    date: '2022-12-06',
+    time: '18:30:55'
   },
   {
     customer_id: customers[1].id,
     amount: 20348,
     status: 'pending',
-    date: '2022-11-14'
+    date: '2022-11-14',
+    time: '18:30:55'
   },
   {
     customer_id: customers[4].id,
     amount: 3040,
     status: 'paid',
-    date: '2022-10-29'
+    date: '2022-10-29',
+    time: '18:30:55'
   },
   {
     customer_id: customers[3].id,
     amount: 44800,
     status: 'paid',
-    date: '2023-09-10'
+    date: '2023-09-10',
+    time: '18:30:55'
   },
   {
     customer_id: customers[5].id,
     amount: 34577,
     status: 'pending',
-    date: '2023-08-05'
+    date: '2023-08-05',
+    time: '18:30:55'
   },
   {
     customer_id: customers[7].id,
     amount: 54246,
     status: 'pending',
-    date: '2023-07-16'
+    date: '2023-07-16',
+    time: '18:30:55'
   },
   {
     customer_id: customers[6].id,
     amount: 666,
     status: 'pending',
-    date: '2023-06-27'
+    date: '2023-06-27',
+    time: '18:30:55'
   },
   {
     customer_id: customers[3].id,
     amount: 32545,
     status: 'paid',
-    date: '2023-06-09'
+    date: '2023-06-09',
+    time: '18:30:55'
   },
   {
     customer_id: customers[4].id,
     amount: 1250,
     status: 'paid',
-    date: '2023-06-17'
+    date: '2023-06-17',
+    time: '18:30:55'
   },
   {
     customer_id: customers[5].id,
     amount: 8546,
     status: 'paid',
-    date: '2023-06-07'
+    date: '2023-06-07',
+    time: '18:30:55'
   },
   {
     customer_id: customers[1].id,
     amount: 500,
     status: 'paid',
-    date: '2023-08-19'
+    date: '2023-08-19',
+    time: '18:30:55'
   },
   {
     customer_id: customers[5].id,
     amount: 8945,
     status: 'paid',
-    date: '2023-06-03'
+    date: '2023-06-03',
+    time: '18:30:55'
   },
   {
     customer_id: customers[2].id,
     amount: 8945,
     status: 'paid',
-    date: '2023-06-18'
+    date: '2023-06-18',
+    time: '18:30:55'
   },
   {
     customer_id: customers[0].id,
     amount: 8945,
     status: 'paid',
-    date: '2023-10-04'
+    date: '2023-10-04',
+    time: '18:30:55'
   },
   {
     customer_id: customers[2].id,
     amount: 1000,
     status: 'paid',
-    date: '2022-06-05'
+    date: '2022-06-05',
+    time: '18:30:55'
   }
 ]
 

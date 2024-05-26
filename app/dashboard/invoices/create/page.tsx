@@ -17,14 +17,6 @@ export default async function Page() {
           }
         ]}
       />
-      <input type='checkbox' className='peer' /> 👈🏼 check / uncheck here
-      <div className='hover:signal peer-checked:signal'>
-        <div className='signal:bg-green-800 bg-red-800 p-1 text-white'>
-          or hover here
-        </div>
-      </div>
-      <button className='btn-active'>Active Button</button>
-      <button className='btn-inactive'>Inactive Button</button>
       <Form customers={customers} />
     </main>
   )
