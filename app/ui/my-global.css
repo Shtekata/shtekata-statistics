@@ -1,10 +1,26 @@
-@tailwind utilities;
+:root {
+  --theme-color: #52b3d0;
+}
+.btn-active {
+  @apply bg-blue-500 hover:bg-blue-900;
+}
+.btn-inactive {
+  @apply bg-gray-300 cursor-not-allowed;
+}
+.f-2-4xl-md {
+  @apply text-2xl;
+  @apply md:text-4xl;
+}
 
-@responsive {
-  .btn-active {
-    @apply bg-blue-500 hover:bg-blue-600;
-  }
-  .btn-inactive {
-    @apply bg-gray-300 cursor-not-allowed;
-  }
+.custom-card {
+  @apply p-4 rounded-lg;
+  @apply bg-blue-500 text-white;
+}
+
+.btn-bg-blue {
+  background-color: var(--theme-color);
+}
+
+.btn-bg-green {
+  @apply bg-green-500;
 }
