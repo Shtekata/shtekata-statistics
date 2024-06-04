@@ -12,7 +12,7 @@ export default function NotFound() {
         className='mt-4 rounded-md bg-blue-500 px-4 py-2 text-sm text-white 
         transition hover:bg-blue-400'
       >
-        Go Back to main page!
+        Go Back to main page again!
       </Link>
     </main>
   )
