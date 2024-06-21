@@ -27,7 +27,7 @@ const FormSchema = z.object({
 })
 
 function Validate(formData: FormData) {
-  let error: State = { errors: {}, message: '' }
+  let error: State = {}
   const ZodInvoice = FormSchema.omit({ id: true, date: true, time: true })
   const validatedFields = ZodInvoice.safeParse({
     customerId: formData.get('customerId'),
@@ -36,7 +36,6 @@ function Validate(formData: FormData) {
   })
 
   if (!validatedFields.success) {
-    console.log(validatedFields.error.flatten().fieldErrors)
     error = {
       errors: validatedFields.error.flatten().fieldErrors,
       message: 'Missing Fields. Failed to Create Invoice.'
@@ -55,7 +54,7 @@ function Validate(formData: FormData) {
 export async function createInvoice(prevState: State, formData: FormData) {
   const { customerId, amountInCents, status, error, date, time } =
     Validate(formData)
-  if (error) return error
+  if (error.message) return error
   try {
     await sql`
     insert into invoices (customer_id,amount,status,date,time)
