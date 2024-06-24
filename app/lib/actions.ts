@@ -67,9 +67,13 @@ export async function createInvoice(prevState: State, formData: FormData) {
   redirect('/dashboard/invoices')
 }
 
-export async function updateInvoice(id: string, formData: FormData) {
+export async function updateInvoice(
+  id: string,
+  prevState: State,
+  formData: FormData
+) {
   const { customerId, amountInCents, status, error } = Validate(formData)
-  if (error) return { ...error }
+  if (error.message) return error
   try {
     await sql`update invoices
     set customer_id=${customerId},amount=${amountInCents},status=${status}
@@ -83,7 +87,6 @@ export async function updateInvoice(id: string, formData: FormData) {
 }
 
 export async function deleteInvoice(id: string) {
-  throw new Error('Failed to Delete Invoice')
   try {
     await sql`delete from invoices where id=${id}`
     revalidatePath('/dashboard/invoices')
