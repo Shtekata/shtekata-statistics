@@ -98,8 +98,6 @@ export async function deleteInvoice(id: string) {
   }
 }
 
-class c extends Error {}
-
 export async function authenticate(
   prevState: string | undefined,
   formData: FormData
@@ -109,7 +107,8 @@ export async function authenticate(
   } catch (error) {
     if (error instanceof AuthError) {
       // if (error.cause?.err instanceof Error) return error.cause.err.message // return "custom error"
-      switch (error.cause?.err?.code) {
+      const err = error.cause?.err as any
+      switch (err.code) {
         case 'credentials':
           return 'Invalid credentials.'
         default:
